@@ -1,5 +1,14 @@
 #import "appDelegate.h"
 
+@implementation MyWindow
+
+-(void) keyDown: (NSEvent *) event {
+	NSLog(@"Blaaaa");
+	[super keyDown: event];	
+}
+
+@end
+
 @implementation SubstanceAppDelegate
 
 @synthesize window;
