@@ -1,18 +1,17 @@
 #import <Cocoa/Cocoa.h>
 #import <WebKit/WebKit.h>
-
-@interface MyWindow: NSWindow {	
-}
-@end
+#import "MainView.h"
 
 @interface SubstanceAppDelegate : NSObject <NSApplicationDelegate> {
-    MyWindow *window;
+    NSWindow *window;
+    MainView *mainView;
 	WebView *webView;
 }
 
 
 
-@property (assign) IBOutlet MyWindow *window;
+@property (assign) IBOutlet NSWindow *window;
+@property (assign) IBOutlet MainView *mainView;
 @property (nonatomic, retain) IBOutlet WebView *webView;
 
 @end

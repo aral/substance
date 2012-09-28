@@ -1,13 +1,5 @@
 #import "appDelegate.h"
 
-@implementation MyWindow
-
--(void) keyDown: (NSEvent *) event {
-	NSLog(@"Blaaaa");
-	[super keyDown: event];	
-}
-
-@end
 
 @implementation SubstanceAppDelegate
 
@@ -20,6 +12,10 @@
 	[ [webView mainFrame] loadRequest: 
 		[NSURLRequest requestWithURL: [NSURL URLWithString:url] ]
 	];
+}
+
+- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender {
+    return YES;
 }
 
 @end
